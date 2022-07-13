@@ -1,9 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
-import Counter from './components/counter';
+import Counters from './components/counters';
 
-const element = <Counter />;
+const element = <Counters />;
 console.log(element);
 
 const root = createRoot(document.getElementById("root"));
