@@ -2,32 +2,32 @@ import React from 'react';
 import ProfilePicture from '../components/profile-picture';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const element = <div class="container">
-    <div class="row">
-        <div class="col">
+const element = <div className="container">
+    <div className="row">
+        <div className="col">
             <ProfilePicture
                 profilePicture="pictures/etna.jpg"
                 login="Lipatant"/>
         </div>
-        <div class="col">
-            <div class="row">
+        <div className="col">
+            <div className="row">
                 Niveau
             </div>
-            <div class="row">
-                <div class="col">
+            <div className="row">
+                <div className="col">
                     GPA
                 </div>
-                <div class="col">
+                <div className="col">
                     Total présence
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
+    <div className="row">
+        <div className="col">
             Graph
         </div>
-        <div class="col">
+        <div className="col">
             Retards et Absences
         </div>
     </div>

@@ -8,15 +8,15 @@ class ProfilePicture extends Component {
     render() {
         return (
             <div>
-                <span class="border border-primary">
-                    <div class="col">
+                <span className="border border-primary">
+                    <div className="col"> {/* eslint-disable-next-line */}
                         <img
                             src={this.props.profilePicture}
-                            class="img-thumbnail"
+                            className="img-thumbnail"
                             width={profilePictureWidth}
                             alt="Profile Picture"/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         {this.props.login}
                     </div>
                 </span>
