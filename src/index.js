@@ -1,9 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.css';
-//import { BrowserRouter, Routes, Route } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter }
     from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 import Layout from './pages/Layout';
 import Login from './pages/Login';
@@ -17,6 +17,14 @@ const routes = [
     {path: '*', element: <NoPage />},
 ];
 
+const CallLayout = () => {
+    return(
+        <header className="App-layout">
+            <Layout />
+        </header>
+    );
+}
+
 const Element = () => {
     return(
         <BrowserRouter>
@@ -24,7 +32,7 @@ const Element = () => {
                 {routes.map(page =>
                     <Route
                         path={page.path}
-                        element=<div><Layout />{page.element}</div>
+                        element=<div><CallLayout />{page.element}</div>
                     />
                 )}
             </Routes>
@@ -34,7 +42,9 @@ const Element = () => {
 
 export default function App() {
     return (
-        <Element />
+        <header className="App-header">
+            <Element />
+        </header>
     )
 }
 

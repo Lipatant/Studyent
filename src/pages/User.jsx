@@ -6,7 +6,7 @@ const element = <div class="container">
     <div class="row">
         <div class="col">
             <ProfilePicture
-                profilePicture="pictures/bmo.jpeg"
+                profilePicture="pictures/etna.jpg"
                 login="Lipatant"/>
         </div>
         <div class="col">

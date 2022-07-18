@@ -3,9 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Login () {
     return (
-        <div>
-            Shesh that's a login page
-        </div>
+        <form>
+            <label for='form-login'>Login</label>
+            <input type='text' id='form-login' name='form-login' />
+        </form>
     )
 }
 
