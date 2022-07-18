@@ -10,8 +10,8 @@ class ProfilePicture extends Component {
             <div>
                 <span class="border border-primary">
                     <div class="col">
-                        <img
-                            src={this.props.img}
+                        <ulage
+                            src={this.props.profilePicture}
                             class="img-thumbnail"
                             width={profilePictureWidth}
                             alt="Profile Picture"/>

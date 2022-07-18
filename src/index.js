@@ -1,38 +1,42 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
-import ProfilePicture from './components/profile-picture';
+//import { BrowserRouter, Routes, Route } from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter }
+    from "react-router-dom";
 
-const element = <div class="container">
-    <div class="row">
-        <div class="col">
-            <ProfilePicture
-                img="pictures/beemo.jpeg"
-                login="Lipatant"/>
-        </div>
-        <div class="col">
-            <div class="row">
-                Niveau
-            </div>
-            <div class="row">
-                <div class="col">
-                    GPA
-                </div>
-                <div class="col">
-                    Total présence
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Graph
-        </div>
-        <div class="col">
-            Retards et Absences
-        </div>
-    </div>
-    </div>;
+import Layout from './pages/Layout';
+import Login from './pages/Login';
+import NoPage from './pages/NoPage';
+import User from './pages/User';
+
+const routes = [
+    {path: '/', element: <Login />},
+    {path: '/login', element: <Login />},
+    {path: '/user', element: <User />},
+    {path: '*', element: <NoPage />},
+];
+
+const Element = () => {
+    return(
+        <BrowserRouter>
+            <Routes>
+                {routes.map(page =>
+                    <Route
+                        path={page.path}
+                        element=<div><Layout />{page.element}</div>
+                    />
+                )}
+            </Routes>
+        </BrowserRouter>
+    );
+}
+
+export default function App() {
+    return (
+        <Element />
+    )
+}
 
 const root = createRoot(document.getElementById("root"));
-root.render(element)
+root.render(<App />);
