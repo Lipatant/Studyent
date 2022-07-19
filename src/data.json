@@ -1,0 +1,12 @@
+{
+    "profilePicture": "etna.jpg",
+    "level": "Tech 3",
+    "gpa": 4,
+    "totalPresence": "42h",
+    "units" : {
+        "valid": 18,
+        "failed": 3
+    },
+    "absences": 1,
+    "lateness": 2
+}
