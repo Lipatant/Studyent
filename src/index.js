@@ -24,6 +24,15 @@ const CallLayout = () => {
     );
 }
 
+const RouteElement = (element) => {
+    return (
+        <div>
+            <CallLayout />
+            {element}
+        </div>
+    )
+}
+
 const Element = () => {
     return(
         <BrowserRouter>
@@ -31,7 +40,7 @@ const Element = () => {
                 {routes.map(page =>
                     <Route
                         path={page.path}
-                        element=<div><CallLayout />{page.element}</div>
+                        element={RouteElement(page.element)}
                     />
                 )}
             </Routes>

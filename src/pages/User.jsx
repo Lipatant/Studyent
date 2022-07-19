@@ -1,40 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ProfilePicture from '../components/profile-picture';
 import 'bootstrap/dist/css/bootstrap.css';
+import * as query from 'query-string';
 
-const element = <div className="container">
-    <div className="row">
-        <div className="col">
-            <ProfilePicture
-                profilePicture="pictures/etna.jpg"
-                login="Lipatant"/>
-        </div>
-        <div className="col">
-            <div className="row">
-                Niveau
-            </div>
-            <div className="row">
-                <div className="col">
-                    GPA
-                </div>
-                <div className="col">
-                    Total présence
-                </div>
-            </div>
-        </div>
-    </div>
-    <div className="row">
-        <div className="col">
-            Graph
-        </div>
-        <div className="col">
-            Retards et Absences
-        </div>
-    </div>
-</div>;
+class User extends Component {
+    state = {
+        login: query.parse(window.location.search)["form-login"],
+    };
 
-const User = () => {
-    return (element);
+    render () {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <ProfilePicture
+                            profilePicture="pictures/etna.jpg"
+                            login={this.state.login}/>
+                    </div>
+                    <div className="col">
+                        <div className="row">
+                            Niveau
+                        </div>
+                        <div className="row">
+                            <div className="col">
+                                GPA
+                            </div>
+                            <div className="col">
+                                Total présence
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        Graph
+                    </div>
+                    <div className="col">
+                        Retards et Absences
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default User;
