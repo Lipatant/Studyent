@@ -8,11 +8,13 @@ import Layout from './pages/Layout';
 import Login from './pages/Login';
 import NoPage from './pages/NoPage';
 import User from './pages/User';
+import Velib from './pages/Velib';
 
 const routes = [
     {path: '/', element: <Login />},
     {path: '/login', element: <Login />},
     {path: '/user', element: <User />},
+    {path: '/velib', element: <Velib />},
     {path: '*', element: <NoPage />},
 ];
 

@@ -9,6 +9,25 @@
   left: 0px;
 }
 
+.User-title {
+  text-align: center;
+}
+
+.Hard-centered {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.User-part {
+  border: 2px solid white;
+}
+
+.Velib-part {
+  border: 2px solid white;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

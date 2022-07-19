@@ -13,8 +13,8 @@ class UnitsGraph extends Component {
                     label: '(non-)Présence',
                     data: [this.props.data1, this.props.data2],
                     backgroundColor: [
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(75, 192, 192, 0.4)',
+                        'rgba(255, 99, 132, 0.4)',
                     ],
                     borderColor: [
                         'rgba(75, 192, 192, 1)',
@@ -31,7 +31,9 @@ class UnitsGraph extends Component {
         return (
             <div>
                 <Pie data={this.createData()} />
-                Modules
+                <header className="User-title">
+                    Modules
+                </header>
             </div>
         );
     };

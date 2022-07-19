@@ -13,21 +13,23 @@ class User extends Component {
     CreateTopPart = () => {
         return (
             <>
-                <div className="col">
+                <div className="col User-part">
                     <ProfilePicture
                         profilePicture={'pictures/' + data.profilePicture}
                         login={this.state.login}/>
                 </div>
-                <div className="col">
+                <div className="col User-part">
                     <div className="row">
-                        {data.level}
+                        <div className="col">
+                            {data.level}
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col">
                             {"GPA : " + data.gpa}
                         </div>
                         <div className="col">
-                            {"Présence totale : " + data.totalPresence}
+                            {"Présence : " + data.totalPresence}
                         </div>
                     </div>
                 </div>
@@ -45,7 +47,12 @@ class User extends Component {
                     />
                 </div>
                 <div className="col">
-                    Retards et Absences
+                    <div className="col">
+                        {data.lateness + " Retards"}
+                    </div>
+                    <div className="col">
+                        {data.absences + " Absences"}
+                    </div>
                 </div>
             </>
         )
@@ -53,11 +60,11 @@ class User extends Component {
 
     render () {
         return (
-            <div className="container">
+            <div className="container User-title">
                 <div className="row">
                     {this.CreateTopPart()}
                 </div>
-                <div className="row">
+                <div className="row User-part">
                     {this.CreateBottomPart()}
                 </div>
             </div>

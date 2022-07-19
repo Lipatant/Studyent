@@ -7,19 +7,19 @@ class ProfilePicture extends Component {
 
     render() {
         return (
-            <div>
-                <span className="border border-primary">
-                    <div className="col"> {/* eslint-disable-next-line */}
-                        <img
-                            src={this.props.profilePicture}
-                            className="img-thumbnail"
-                            width={profilePictureWidth}
-                            alt="Profile Picture"/>
-                    </div>
-                    <div className="col">
+            <div className="User-title">
+                <div className="col"> {/* eslint-disable-next-line */}
+                    <img
+                        src={this.props.profilePicture}
+                        className="img-thumbnail"
+                        width={profilePictureWidth}
+                        alt="Profile Picture"/>
+                </div>
+                <div className="col">
+                    <b>
                         {this.props.login}
-                    </div>
-                </span>
+                    </b>
+                </div>
             </div>
         );
     }
